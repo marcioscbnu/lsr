@@ -3,178 +3,239 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javatech & Projetos | Marcio Schoenfelder</title>
-    <style>
-      :root {
-        --primary: #2563eb;
-        --primary-dark: #1d4ed8;
-        --bg-color: #0f172a;
-        --card-bg: #1e293b;
-        --text-color: #f8fafc;
-        --text-muted: #94a3b8;
-        --accent: #38bdf8;
-        --border: #334155;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Oxygen,
-          Ubuntu,
-          Cantarell,
-          sans-serif;
-      }
-
-      body {
-        background-color: var(--bg-color);
-        color: var(--text-color);
-        line-height: 1.6;
-        padding: 2rem 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      .container {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      header {
-        text-align: center;
-        margin-bottom: 2.5rem;
-      }
-
-      header h1 {
-        font-size: 2.25rem;
-        color: var(--text-color);
-        margin-bottom: 0.5rem;
-      }
-
-      header h1 span {
-        color: var(--accent);
-      }
-
-      header p {
-        color: var(--text-muted);
-        font-size: 1.1rem;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-      }
-
-      @media (min-width: 640px) {
-        .grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      .card {
-        background-color: var(--card-bg);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1.5rem;
-        text-decoration: none;
-        color: inherit;
-        transition:
-          transform 0.2s ease,
-          border-color 0.2s ease,
-          box-shadow 0.2s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .card:hover {
-        transform: translateY(-3px);
-        border-color: var(--accent);
-        box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.1);
-      }
-
-      .card h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        color: var(--text-color);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .card p {
-        color: var(--text-muted);
-        font-size: 0.95rem;
-        margin-bottom: 1.25rem;
-      }
-
-      .card-link {
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
-      }
-
-      footer {
-        text-align: center;
-        margin-top: 3rem;
-        color: var(--text-muted);
-        font-size: 0.875rem;
-        border-top: 1px solid var(--border);
-        padding-top: 1.5rem;
-      }
-    </style>
+    <title>LSR - Laboratório de Software Responsável</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React & ReactDOM -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react.development.js"
+    ></script>
+    <!-- Babel para JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>LSR - LABORATÓRIO DE SOFTWARE RESPONSÁVEL</h1>
-      </header>
+  <body
+    class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950"
+  >
+    <div id="root"></div>
 
-      <div class="grid">
-        <a
-          href="https://lsr_landing_page.html"
-          class="card"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div>
-            <h2>🌐 Javatech</h2>
-            <p>
-              Desenvolvimento web customizado, landing pages, registro de
-              domínios e mentoria técnica em Java e Banco de Dados.
-            </p>
+    <script type="text/babel">
+      function App() {
+        const [activeTab, setActiveTab] = React.useState("home");
+
+        React.useEffect(() => {
+          lucide.createIcons();
+        }, [activeTab]);
+
+        return (
+          <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+            {/* Header */}
+            <header className="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+                <div
+                  className="flex items-center space-x-3 cursor-pointer"
+                  onClick={() => setActiveTab("home")}
+                >
+                  <div className="bg-cyan-500 text-slate-950 p-2 rounded-xl font-bold flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <i data-lucide="cpu" className="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                      LSR
+                    </span>
+                    <span className="block text-xs text-slate-400">
+                      Laboratório de Software Responsável
+                    </span>
+                  </div>
+                </div>
+                <nav className="hidden md:flex items-center space-x-6">
+                  <button
+                    onClick={() => setActiveTab("home")}
+                    className={`text-sm font-medium transition-colors hover:text-cyan-400 ${activeTab === "home" ? "text-cyan-400" : "text-slate-300"}`}
+                  >
+                    Início
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("audits")}
+                    className={`text-sm font-medium transition-colors hover:text-cyan-400 ${activeTab === "audits" ? "text-cyan-400" : "text-slate-300"}`}
+                  >
+                    Auditorias & Relatórios
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("questionnaires")}
+                    className={`text-sm font-medium transition-colors hover:text-cyan-400 ${activeTab === "questionnaires" ? "text-cyan-400" : "text-slate-300"}`}
+                  >
+                    Questionários
+                  </button>
+                </nav>
+                <div>
+                  <button
+                    onClick={() => setActiveTab("questionnaires")}
+                    className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg font-semibold text-sm transition-all shadow-lg shadow-cyan-500/20"
+                  >
+                    Iniciar Avaliação
+                  </button>
+                </div>
+              </div>
+            </header>
+
+            {/* Main Content */}
+            <main className="flex-1">
+              {activeTab === "home" && (
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                  <div className="text-center max-w-3xl mx-auto space-y-6">
+                    <span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                      <i data-lucide="shield-check" className="w-3.5 h-3.5"></i>{" "}
+                      Governança e Qualidade de Software
+                    </span>
+                    <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                      Engenharia de Software com{" "}
+                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        Responsabilidade
+                      </span>
+                    </h1>
+                    <p className="text-lg text-slate-400">
+                      O LSR (Laboratório de Software Responsável) desenvolve
+                      frameworks de avaliação, relatórios automatizados em PDF e
+                      diretrizes técnicas para sistemas seguros, eficientes e
+                      auditáveis.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4 pt-4">
+                      <button
+                        onClick={() => setActiveTab("questionnaires")}
+                        className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-6 py-3 rounded-xl transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2"
+                      >
+                        Acessar Questionários{" "}
+                        <i data-lucide="arrow-right" className="w-4 h-4"></i>
+                      </button>
+                      <button
+                        onClick={() => setActiveTab("audits")}
+                        className="bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold px-6 py-3 rounded-xl transition-all"
+                      >
+                        Ver Relatórios
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Features Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+                    <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-2xl backdrop-blur">
+                      <div className="w-12 h-12 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" className="w-6 h-6"></i>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Geração de Laudos em PDF
+                      </h3>
+                      <p className="text-slate-400 text-sm">
+                        Estruturação automática de relatórios de auditoria a
+                        partir de datasets JSON estruturados com rigor técnico.
+                      </p>
+                    </div>
+                    <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-2xl backdrop-blur">
+                      <div className="w-12 h-12 bg-blue-500/10 text-blue-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="check-circle-2" className="w-6 h-6"></i>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Avaliação de Conformidade
+                      </h3>
+                      <p className="text-slate-400 text-sm">
+                        Questionários dinâmicos e fluxos guiados para checagem
+                        de boas práticas de desenvolvimento e arquitetura.
+                      </p>
+                    </div>
+                    <div className="bg-slate-900/50 border border-slate-800/80 p-6 rounded-2xl backdrop-blur">
+                      <div className="w-12 h-12 bg-indigo-500/10 text-indigo-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="terminal" className="w-6 h-6"></i>
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        Mentoria & Prática
+                      </h3>
+                      <p className="text-slate-400 text-sm">
+                        Integração com conceitos modernos de stack web, bancos
+                        de dados e automações inteligentes baseadas em IA.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "audits" && (
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                  <h2 className="text-3xl font-bold text-white mb-6">
+                    Auditorias & Relatórios
+                  </h2>
+                  <p className="text-slate-400 mb-8">
+                    Lista de relatórios e laudos gerados pelo framework do LSR.
+                  </p>
+                  <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-center text-slate-400">
+                    <i
+                      data-lucide="folder-open"
+                      className="w-12 h-12 mx-auto mb-3 opacity-50"
+                    ></i>
+                    Nenhum relatório pendente de auditoria no momento. Utilize
+                    os questionários para gerar novas análises.
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "questionnaires" && (
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                  <h2 className="text-3xl font-bold text-white mb-2">
+                    Área de Questionários
+                  </h2>
+                  <p className="text-slate-400 mb-8">
+                    Selecione uma trilha de avaliação de software responsável:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-cyan-500/50 transition-all cursor-pointer">
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        Avaliação de Qualidade de Código
+                      </h3>
+                      <p className="text-slate-400 text-sm mb-4">
+                        Questionário focado em manutenibilidade, testes
+                        automatizados e padrões arquiteturais.
+                      </p>
+                      <span className="text-cyan-400 text-sm font-medium flex items-center gap-1">
+                        Iniciar questionário{" "}
+                        <i data-lucide="chevron-right" className="w-4 h-4"></i>
+                      </span>
+                    </div>
+                    <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-cyan-500/50 transition-all cursor-pointer">
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        Auditoria de Segurança e Dados
+                      </h3>
+                      <p className="text-slate-400 text-sm mb-4">
+                        Verificação de conformidade com padrões de proteção de
+                        dados e boas práticas de API.
+                      </p>
+                      <span className="text-cyan-400 text-sm font-medium flex items-center gap-1">
+                        Iniciar questionário{" "}
+                        <i data-lucide="chevron-right" className="w-4 h-4"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </main>
+
+            {/* Footer */}
+            <footer className="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+              <p>
+                © 2026 Laboratório de Software Responsável (LSR). Todos os
+                direitos reservados.
+              </p>
+            </footer>
           </div>
-          <span class="card-link">Visitar site →</span>
-        </a>
+        );
+      }
 
-        <a href="#" class="card">
-          <div>
-            <h2>🧠 NeuroRecursos TEA</h2>
-            <p>
-              Repositório dedicado a materiais pedagógicos e recursos voltados
-              para a inclusão e suporte educacional.
-            </p>
-          </div>
-          <span class="card-link">Explorar recursos →</span>
-        </a>
-      </div>
-
-      <footer>
-        <p>© 2026 Marcio Schoenfelder. Blumenau, Santa Catarina.</p>
-      </footer>
-    </div>
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
   </body>
 </html>
