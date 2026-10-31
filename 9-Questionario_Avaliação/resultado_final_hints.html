@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resultado final (consolidação)</title>
+  <style>
+:root{--bg:#0b1220;--card:#0f1b33;--muted:#94a3b8;--text:#e5e7eb;--accent:#22c55e;--accent2:#3b82f6;--warn:#f59e0b;--bad:#ef4444;}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,#050915,#0b1220 35%,#0b1220);color:var(--text)}
+a{color:#93c5fd;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:22px}
+header{display:flex;gap:14px;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.brand{display:flex;gap:12px;align-items:center}
+.badge{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent2),#60a5fa);display:grid;place-items:center;font-weight:800}
+h1{font-size:20px;margin:0 0 6px 0}
+.sub{color:var(--muted);font-size:13px;margin:0;line-height:1.35}
+.card{background:rgba(15,27,51,.88);border:1px solid rgba(148,163,184,.18);border-radius:18px;padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:900px){.grid{grid-template-columns:1.3fr .7fr}}
+small.k{display:inline-block;padding:.2rem .55rem;border-radius:999px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:#bfdbfe;font-size:12px}
+hr{border:none;border-top:1px solid rgba(148,163,184,.14);margin:14px 0}
+.crit{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px;border-radius:14px;border:1px solid rgba(148,163,184,.12);background:rgba(2,6,23,.22)}
+.crit h3{margin:0;font-size:14px}
+.crit p{margin:3px 0 0 0;color:var(--muted);font-size:12.5px;line-height:1.35}
+.stars{display:flex;gap:6px;align-items:center;user-select:none;justify-content:flex-end}
+.star{width:22px;height:22px;cursor:pointer;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+.star svg{width:22px;height:22px}
+.star[data-on="1"] path{fill:#fde047}
+.star[data-on="0"] path{fill:rgba(148,163,184,.25)}
+.hintline{margin-top:6px;font-size:11.5px;color:var(--muted);text-align:right;max-width:220px}
+.scorebox{display:grid;gap:10px}
+.big{font-size:28px;font-weight:800}
+.muted{color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{cursor:pointer;border:none;border-radius:12px;padding:10px 12px;font-weight:650;background:rgba(59,130,246,.16);border:1px solid rgba(59,130,246,.35);color:#dbeafe}
+.btn:hover{background:rgba(59,130,246,.22)}
+.btn2{background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.35);color:#dcfce7}
+.btn2:hover{background:rgba(34,197,94,.20)}
+.btn3{background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.35);color:#ffedd5}
+.btn3:hover{background:rgba(245,158,11,.20)}
+.btn4{background:rgba(239,68,68,.14);border:1px solid rgba(239,68,68,.35);color:#fee2e2}
+.btn4:hover{background:rgba(239,68,68,.20)}
+input[type="text"], textarea, input[type="number"]{
+  width:100%; background:rgba(2,6,23,.35); color:var(--text);
+  border:1px solid rgba(148,163,184,.22); border-radius:12px; padding:10px 12px;
+}
+textarea{min-height:120px;resize:vertical}
+label{font-size:12.5px;color:var(--muted);display:block;margin:8px 0 6px}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.18);background:rgba(2,6,23,.22)}
+.pill b{font-size:12.5px}
+.tagA{color:#86efac}
+.tagB{color:#93c5fd}
+.tagC{color:#fdba74}
+.notice{padding:10px 12px;border-radius:14px;background:rgba(2,6,23,.22);border:1px solid rgba(148,163,184,.12);color:var(--muted);font-size:12.5px;line-height:1.35}
+pre{white-space:pre-wrap;background:rgba(2,6,23,.35);border:1px solid rgba(148,163,184,.16);border-radius:14px;padding:12px;color:#e2e8f0}
+footer{margin-top:14px;color:var(--muted);font-size:12px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.legend .pill{background:rgba(59,130,246,.10)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="badge">Σ</div>
+        <div>
+          <h1>Resultado final (consolidação)</h1>
+          <p class="sub">Consolida as notas das páginas 2–4 • <small class="k">0–10 e Conceito A/B/C</small></p>
+        </div>
+      </div>
+      <div class="row">
+        <a class="pill" href="apresentacao_final_hints_20260217_232814.html"><b>← Voltar</b><span class="muted">(apresentacao_final_hints_20260217_232814.html)</span></a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div class="notice">
+          <b>Como funciona:</b> este painel lê automaticamente as avaliações salvas no seu navegador (localStorage) e calcula
+          a nota final (0–10) usando pesos. Você pode ajustar os pesos conforme sua estratégia de avaliação.
+        </div>
+        <hr/>
+
+        <div class="crit">
+          <div>
+            <h3>Auditoria do repositório</h3>
+            <p class="muted">Lê a nota da página 2 (auditoria_repositorio).</p>
+          </div>
+          <div class="row">
+            <span class="pill"><b>Nota:</b> <span id="repoScore">—</span></span>
+            <span class="pill"><b>Peso:</b> <input id="wRepo" type="number" min="0" max="1" step="0.05" value="0.40" style="width:90px"/></span>
+          </div>
+        </div>
+
+        <div class="crit">
+          <div>
+            <h3>Reprodutibilidade</h3>
+            <p class="muted">Lê a nota da página 3 (reprodutibilidade).</p>
+          </div>
+          <div class="row">
+            <span class="pill"><b>Nota:</b> <span id="repScore">—</span></span>
+            <span class="pill"><b>Peso:</b> <input id="wRep" type="number" min="0" max="1" step="0.05" value="0.30" style="width:90px"/></span>
+          </div>
+        </div>
+
+        <div class="crit">
+          <div>
+            <h3>Apresentação final</h3>
+            <p class="muted">Lê a nota da página 4 (apresentacao_final).</p>
+          </div>
+          <div class="row">
+            <span class="pill"><b>Nota:</b> <span id="apreScore">—</span></span>
+            <span class="pill"><b>Peso:</b> <input id="wApre" type="number" min="0" max="1" step="0.05" value="0.30" style="width:90px"/></span>
+          </div>
+        </div>
+
+        <hr/>
+        <div class="notice">
+          <b>Importante:</b> os pesos devem somar 1,00. Se não somarem, o sistema normaliza automaticamente.
+        </div>
+        <div class="row" style="margin-top:10px">
+          <button class="btn3" id="calcBtn">Calcular</button>
+          <button class="btn2" id="genBtn">Gerar relatório final</button>
+          <button class="btn" id="exportBtn">Exportar JSON</button>
+          <button class="btn4" id="clearBtn">Limpar tudo</button>
+        </div>
+      </div>
+
+      <div class="card scorebox">
+        <div class="row" style="justify-content:space-between">
+          <div class="pill"><b>Nota final (0–10):</b> <span id="final10" class="big">0.00</span></div>
+          <div class="pill"><b>Conceito:</b> <span id="finalConcept" class="big tagC">C</span></div>
+        </div>
+
+        <div class="notice">
+          <b>Regras de conceito:</b><br/>
+          0 a 5,99 = C<br/>
+          6 a 7,99 = B<br/>
+          8 a 10 = A
+        </div>
+
+        <label>Equipe/Grupo (opcional)</label>
+        <input type="text" id="team" placeholder="Ex.: Equipe 3 / Grupo A"/>
+
+        <label>(a) Pontos positivos</label>
+        <textarea id="positivos" placeholder="Clique em Gerar relatório final..."></textarea>
+
+        <label>(b) Pontos de melhoria</label>
+        <textarea id="melhorias" placeholder="Clique em Gerar relatório final..."></textarea>
+
+        <label>(c) Parecer geral</label>
+        <textarea id="parecer" placeholder="Clique em Gerar relatório final..."></textarea>
+
+        <div class="notice">
+          <b>Relatório final:</b>
+          <pre id="report">(ainda não gerado)</pre>
+        </div>
+
+        <footer>
+          Página de consolidação • Atualização: 17/02/2026.<br/>
+          Dica: use “Exportar JSON” para arquivar a avaliação.
+        </footer>
+      </div>
+    </div>
+  </div>
+
+<script>
+
+const STAR_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l2.86 6.02 6.64.58-5.03 4.38 1.52 6.5L12 16.9 6.01 19.88l1.52-6.5L2.5 9l6.64-.58L12 2.4z"/></svg>`;
+
+const STAR_HINTS = [
+  "1★ — Insuficiente (não atende / ausente)",
+  "2★ — Parcial (incompleto / falhas relevantes)",
+  "3★ — Adequado (atende ao mínimo esperado)",
+  "4★ — Muito bom (bem feito / consistente)",
+  "5★ — Excelente (exemplar / referência)"
+];
+
+function mapStarsTo10(stars){ return Math.round(((stars-1) * 2.5) * 100) / 100; }
+function conceptFrom10(score){ if(score < 6) return "C"; if(score < 8) return "B"; return "A"; }
+function clamp(n, a, b){return Math.max(a, Math.min(b, n));}
+
+function hintFor(v){
+  if(!v) return "Passe o mouse nas estrelas para ver o guia.";
+  return STAR_HINTS[v-1] || "";
+}
+
+function createStarGroup(el, initial=0, hintEl=null){
+  el.innerHTML = "";
+  if(hintEl) hintEl.textContent = hintFor(initial);
+
+  for(let i=1;i<=5;i++){
+    const s=document.createElement("span");
+    s.className="star";
+    s.innerHTML=STAR_SVG;
+    s.dataset.on = (i<=initial) ? "1" : "0";
+    s.title = STAR_HINTS[i-1];
+    s.setAttribute("aria-label", STAR_HINTS[i-1]);
+
+    s.addEventListener("mouseenter", ()=>{ if(hintEl) hintEl.textContent = STAR_HINTS[i-1]; });
+    s.addEventListener("mouseleave", ()=>{ if(hintEl) hintEl.textContent = hintFor(Number(el.dataset.value||0)); });
+
+    s.addEventListener("click", ()=>{
+      for(let j=0;j<el.children.length;j++){
+        el.children[j].dataset.on = ((j+1)<=i) ? "1":"0";
+      }
+      el.dataset.value = i;
+      if(hintEl) hintEl.textContent = hintFor(i);
+      el.dispatchEvent(new CustomEvent("rating-change",{detail:{value:i}}));
+    });
+    el.appendChild(s);
+  }
+  el.dataset.value = initial;
+  return {value: initial};
+}
+
+function computeFromCriteria(criteria){
+  const stars = criteria.map(c => Number(c.el.dataset.value||0));
+  const filled = stars.filter(s=>s>0);
+  const score10 = filled.length ? (filled.reduce((a,b)=>a+mapStarsTo10(b),0)/filled.length) : 0;
+  return {score10: Math.round(score10*100)/100, concept: conceptFrom10(score10)};
+}
+
+function autoFindings(criteria){
+  const pos=[], imp=[];
+  for(const c of criteria){
+    const v = Number(c.el.dataset.value||0);
+    if(v>=4) pos.push(`• ${c.title}`);
+    if(v>0 && v<=2) imp.push(`• ${c.title}`);
+  }
+  if(!pos.length) pos.push("• (nenhum ponto forte destacado automaticamente — revise as notas)");
+  if(!imp.length) imp.push("• (nenhum ponto crítico destacado automaticamente — revise as notas)");
+  return {pos, imp};
+}
+
+function toJSONBlob(obj){ return new Blob([JSON.stringify(obj,null,2)], {type:"application/json"}); }
+
+function download(filename, blob){
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove();}, 200);
+}
+
+function nowISO(){ return new Date().toISOString().replace(/[:.]/g,"-"); }
+
+
+const KEYS = ["auditoria_repositorio","reprodutibilidade","apresentacao_final"];
+
+function readKey(k){
+  const raw = localStorage.getItem(k);
+  if(!raw) return null;
+  try { return JSON.parse(raw); } catch(e){ return null; }
+}
+
+function sumWeights(wRepo, wRep, wApre){
+  let s = wRepo+wRep+wApre;
+  if(s<=0) return [1/3,1/3,1/3];
+  return [wRepo/s, wRep/s, wApre/s];
+}
+
+function conceptColor(c){
+  const el=document.getElementById("finalConcept");
+  el.classList.remove("tagA","tagB","tagC");
+  el.classList.add(c==="A"?"tagA":c==="B"?"tagB":"tagC");
+}
+
+function computeFinal(){
+  const repo = readKey("auditoria_repositorio");
+  const rep = readKey("reprodutibilidade");
+  const apre = readKey("apresentacao_final");
+
+  const repoScore = (repo && typeof repo.score10==="number") ? repo.score10 : null;
+  const repScore  = (rep && typeof rep.score10==="number")  ? rep.score10  : null;
+  const apreScore = (apre && typeof apre.score10==="number")? apre.score10 : null;
+
+  document.getElementById("repoScore").textContent = (repoScore==null ? "não salvo" : repoScore.toFixed(2));
+  document.getElementById("repScore").textContent  = (repScore==null ? "não salvo" : repScore.toFixed(2));
+  document.getElementById("apreScore").textContent = (apreScore==null ? "não salvo" : apreScore.toFixed(2));
+
+  const wRepo = clamp(Number(document.getElementById("wRepo").value||0),0,1);
+  const wRep  = clamp(Number(document.getElementById("wRep").value||0),0,1);
+  const wApre = clamp(Number(document.getElementById("wApre").value||0),0,1);
+  const [nr,nre,na] = sumWeights(wRepo,wRep,wApre);
+
+  const parts = [
+    {label:"Auditoria do repositório", score: repoScore, w:nr, data: repo},
+    {label:"Reprodutibilidade", score: repScore, w:nre, data: rep},
+    {label:"Apresentação final", score: apreScore, w:na, data: apre},
+  ];
+  const present = parts.filter(p=>typeof p.score==="number" && !isNaN(p.score));
+  if(!present.length){
+    document.getElementById("final10").textContent = "0.00";
+    document.getElementById("finalConcept").textContent = "C";
+    conceptColor("C");
+    return {final10:0, concept:"C", present};
+  }
+
+  const sumW = present.reduce((a,p)=>a+p.w,0);
+  const final10 = present.reduce((a,p)=>a+(p.score*(p.w/sumW)),0);
+  const concept = conceptFrom10(final10);
+
+  document.getElementById("final10").textContent = final10.toFixed(2);
+  document.getElementById("finalConcept").textContent = concept;
+  conceptColor(concept);
+
+  return {final10: Math.round(final10*100)/100, concept, present};
+}
+
+function collectAutoText(present){
+  const positivos=[];
+  const melhorias=[];
+  for(const p of present){
+    if(p.score>=8) positivos.push(`• ${p.label}: desempenho forte (≥ 8).`);
+    else if(p.score>=6) positivos.push(`• ${p.label}: bom nível (6–7,99), com pontos a consolidar.`);
+    else melhorias.push(`• ${p.label}: precisa reforço (< 6).`);
+
+    const imp = (p.data && p.data.melhorias ? String(p.data.melhorias) : "").trim();
+    const pos = (p.data && p.data.positivos ? String(p.data.positivos) : "").trim();
+    if(pos) positivos.push(`• (${p.label}) ${pos.split("\n")[0].replace(/^•\s*/,"")}`);
+    if(imp) melhorias.push(`• (${p.label}) ${imp.split("\n")[0].replace(/^•\s*/,"")}`);
+  }
+  if(!positivos.length) positivos.push("• (sem destaques automáticos — revise as notas)");
+  if(!melhorias.length) melhorias.push("• (sem alertas automáticos — revise as notas)");
+  return {positivos: positivos.join("\n"), melhorias: melhorias.join("\n")};
+}
+
+function generateFinalReport(){
+  const calc = computeFinal();
+  const team = document.getElementById("team").value.trim();
+  const auto = collectAutoText(calc.present);
+
+  if(!document.getElementById("positivos").value.trim()) document.getElementById("positivos").value = auto.positivos;
+  if(!document.getElementById("melhorias").value.trim()) document.getElementById("melhorias").value = auto.melhorias;
+  if(!document.getElementById("parecer").value.trim()) {
+    document.getElementById("parecer").value =
+      `Parecer geral: conceito ${calc.concept} (nota ${calc.final10.toFixed(2)} / 10). ` +
+      `Manter os pontos fortes e atacar os pontos abaixo de 6 com plano de ação.`;
+  }
+
+  const report =
+`RELATÓRIO FINAL - Hackathon (consolidação)
+Equipe/Grupo: ${team || "(não informado)"}
+Data: ${new Date().toLocaleString()}
+
+NOTA FINAL (0–10): ${calc.final10.toFixed(2)}
+CONCEITO FINAL: ${calc.concept}
+
+(a) PONTOS POSITIVOS:
+${document.getElementById("positivos").value.trim()}
+
+(b) PONTOS DE MELHORIA:
+${document.getElementById("melhorias").value.trim()}
+
+(c) PARECER GERAL:
+${document.getElementById("parecer").value.trim()}
+`;
+  document.getElementById("report").textContent = report;
+}
+
+function exportJSON(){
+  const calc = computeFinal();
+  const obj = {
+    type: "consolidado",
+    exportedAt: new Date().toISOString(),
+    team: document.getElementById("team").value.trim(),
+    weights: {
+      repo: Number(document.getElementById("wRepo").value||0),
+      reprod: Number(document.getElementById("wRep").value||0),
+      apresentacao: Number(document.getElementById("wApre").value||0),
+    },
+    final10: calc.final10,
+    concept: calc.concept,
+    positives: document.getElementById("positivos").value,
+    improvements: document.getElementById("melhorias").value,
+    opinion: document.getElementById("parecer").value,
+    report: document.getElementById("report").textContent,
+    parts: KEYS.map(k=>readKey(k)).filter(Boolean),
+  };
+  download(`resultado_final_${nowISO()}.json`, toJSONBlob(obj));
+}
+
+function clearAll(){
+  if(!confirm("Isso apaga as avaliações salvas das páginas 2–4 e o relatório final. Continuar?")) return;
+  KEYS.forEach(k=>localStorage.removeItem(k));
+  location.reload();
+}
+
+document.getElementById("calcBtn").addEventListener("click", computeFinal);
+document.getElementById("genBtn").addEventListener("click", generateFinalReport);
+document.getElementById("exportBtn").addEventListener("click", exportJSON);
+document.getElementById("clearBtn").addEventListener("click", clearAll);
+["wRepo","wRep","wApre"].forEach(id=>document.getElementById(id).addEventListener("input", computeFinal));
+
+computeFinal();
+</script>
+</body>
+</html>
